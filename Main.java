@@ -9,10 +9,7 @@ public class Main {
     }
 }
 
-/**
- * Todo encapsulado aquí: lista, scanner, métodos.
- * No hay variables globales sueltas fuera de clases.
- */
+
 class AcademiaSistema {
     private final ArrayList<Alumno> alumnos = new ArrayList<>();
     private final Scanner sc = new Scanner(System.in);
@@ -52,7 +49,7 @@ class AcademiaSistema {
         String carnet = leerTexto("Carnet: ");
         double promedio = leerDouble("Promedio: ");
 
-        // validar carnet no repetido
+        
         if (existeCarnet(carnet)) {
             System.out.println("❌ Ya existe un alumno con ese carnet. No se inscribió.");
             return;
@@ -101,7 +98,7 @@ class AcademiaSistema {
         return null;
     }
 
-    // ---------- Lecturas seguras ----------
+   
     private String leerTexto(String msg) {
         System.out.print(msg);
         String s = sc.nextLine().trim();
